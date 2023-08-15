@@ -1,0 +1,9 @@
+.header {
+    min-height: 61px;
+    /* background-color: #2C394B; */
+    color: #fff;
+}
+
+.navigation-links {
+    list-style-type: decimal-leading-zero;
+}
