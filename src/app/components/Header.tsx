@@ -2,7 +2,7 @@ import styles from './Header.module.css';
 
 export default function Header() {
     return (
-        <header className={`${styles.header} bg-gray-900 sticky top-0 flex justify-between backdrop-filter backdrop-blur-lg bg-opacity-30`}>
+        <header className="min-h-[var(--navbar-height)] bg-zinc-600 sticky top-0 flex justify-between backdrop-filter backdrop-blur-lg bg-opacity-30">
             <div className="container mx-auto flex">
                 <div className="text-3xl flex items-center text-portfolio-orange">
                     {"<Trey />"}
@@ -26,7 +26,7 @@ export default function Header() {
                         </li>
                         <li className='list-none'>
                             <a 
-                                className='inline-block bg-portfolio-orange hover:bg-orange-600 text-white font-semibold 
+                                className='inline-block bg-portfolio-orange hover:bg-orange-600 font-semibold 
                                 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
                                 rounded-full'
                                 target='blank' 

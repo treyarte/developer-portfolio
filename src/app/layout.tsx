@@ -22,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className}  dark:bg-black`}>{children}</body>
+      <body className={`${roboto.className}  dark:bg-black`}>{children}
+      <script src="https://kit.fontawesome.com/858809a5ac.js" crossOrigin="anonymous"></script>
+      </body>
     </html>
   )
 }

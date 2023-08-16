@@ -1,3 +1,12 @@
 .hero {
     height: calc(100vh - 61px);
 }
+
+.social-connect {
+    min-height: 36px;
+}
+
+.greeting-text {
+    min-height: 2.5rem;
+    min-width: 36rem;
+}

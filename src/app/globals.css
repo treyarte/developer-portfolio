@@ -13,9 +13,23 @@
 
 */
 
+:root {
+  --navbar-height:61px;
+}
+
 html, body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  --orange: FF4C29
+  /* --orange: FF4C29; */
+
+}
+
+.profile-hero {
+  background: url("/static/images/texture.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* height: 100%; */
 }

@@ -15,7 +15,10 @@ const config: Config = {
       },
       colors:{
         'portfolio-orange': '#FF8551'
-      }
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite'
+      },
     },
   },
   plugins: [],

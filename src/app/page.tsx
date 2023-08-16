@@ -1,13 +1,16 @@
 import Image from 'next/image'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import About from './components/About'
 
 export default function Home() {
   return (
-    <main>
+    <main className='text-white '>
       <Header/>
-      <Hero />
-      <Hero/>
+      <div className='bg-gradient-to-bl from-zinc-900 via-zinc-700 to-orange-900'>
+        <Hero />
+      </div>
+        <About/>
     </main>
   )
 }
