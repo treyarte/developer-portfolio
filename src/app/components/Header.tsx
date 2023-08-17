@@ -2,7 +2,7 @@ import styles from './Header.module.css';
 
 export default function Header() {
     return (
-        <header className="min-h-[var(--navbar-height)] bg-zinc-600 sticky top-0 flex justify-between backdrop-filter backdrop-blur-lg bg-opacity-30">
+        <header className="z-10 min-h-[var(--navbar-height)] bg-zinc-800 sticky top-0 flex justify-between backdrop-filter backdrop-blur-lg bg-opacity-30">
             <div className="container mx-auto flex">
                 <div className="text-3xl flex items-center text-portfolio-orange">
                     {"<Trey />"}

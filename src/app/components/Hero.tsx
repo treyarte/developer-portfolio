@@ -28,13 +28,13 @@ export default function Hero() {
                   </li>
               </ul>            
             <h1 className={`${styles["greeting-text"]} text-4xl`}>Hello, I'm Trey, a <span className="text-portfolio-orange">Full-Stack</span> Engineer.</h1>
-            <div className=" tracking-widest transition-all hover:text-portfolio-orange cursor-pointer absolute left-50 bottom-10 animate-bounce 
-                            bg-white dark:bg-zinc-800 p-2 w-10 h-10 shadow-lg rounded-full 
-                            flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
-  </div>
+            
+            <div className="container flex justify-center mt-12">
+              <a href='#about' className="border-solid border-2 border-portfolio-orange 
+              rounded-md bg-inherit p-3 text-lg hover:bg-portfolio-orange transition duration-200 ease-out hover:ease-in">
+                Check Me Out
+              </a>
+            </div>
         </div>
     )
 }

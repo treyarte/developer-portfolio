@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${roboto.className}  dark:bg-black`}>{children}
+    <html lang="en" className="scroll-smooth">
+      <body className={`${roboto.className}  dark:bg-zinc-900`}>{children}
       <script src="https://kit.fontawesome.com/858809a5ac.js" crossOrigin="anonymous"></script>
       </body>
     </html>
