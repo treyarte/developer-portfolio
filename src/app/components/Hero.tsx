@@ -22,7 +22,7 @@ export default function Hero() {
                     </a>
                 </li>
                 <li>
-                  <a className='hover:text-zinc-300' target="_blank" href="./files/treyvion_johnson_resume.pdf">
+                  <a className='hover:text-zinc-300' target="_blank" href="/static/files/treyvion_johnson_resume.pdf">
                     <span className="fas fa-file-pdf" aria-hidden="true"></span>
                   </a>
                   </li>
