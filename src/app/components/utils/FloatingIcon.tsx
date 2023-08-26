@@ -1,4 +1,5 @@
-import { SkillHelper, skillEnum } from "@/app/helpers/SkillHelper";
+import { SkillHelper } from "@/app/helpers/SkillHelper";
+import { skillEnum } from "@/app/models/enums/SkillEnum";
 import { useEffect } from "react";
 export default function FloatingIcon() {
     const getEnumName = (skillName:string) => (skillEnum[skillName as keyof typeof skillEnum])

@@ -1,0 +1,80 @@
+
+
+.left {
+    left: 0;
+  }
+  
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left and right timeline items (pointing right) */
+  .left::before,
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    border: medium solid var(--zinc-dark);
+
+  }
+
+  /*
+    points to the right
+  */
+  .left::before {
+    right: 31px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--zinc-dark);
+  }
+
+  /*
+    points to the left
+  */
+  .right::before {
+    left: 31px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--zinc-dark) transparent transparent;
+  }
+  
+  /* 
+    adjusts right side circles to fit on the timeline
+  */
+  .right::after {
+    left: -13px;
+  }
+
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 640px) {
+  /* 
+    Place the line to the left 
+  */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* 
+    Make sure that all arrows are pointing leftwards 
+  */
+    .left::before,
+    .right::before {
+      left: 60px;
+      border: medium solid var(--zinc-dark);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--zinc-dark) transparent transparent;
+    }
+  
+  /* 
+    Make sure all circles are at the same spot
+  */
+    .left::after, .right::after {
+      left: 18px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }

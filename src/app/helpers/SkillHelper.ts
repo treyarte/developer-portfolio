@@ -1,32 +1,5 @@
-/**
- * Enum for skills Trey has
- */
-export enum skillEnum {
-    csharp = "C#/.Net",
-    javaScript = "JavaScript",
-    go = "Go",
-    python = "Python",
-    nextjs = "Next.JS",
-    node = "Node.js",
-    flask = "Flask",
-    azure = "Azure",
-    heroku = "Heroku",
-    docker = "Docker",
-    mongodb = "Mongo DB",
-    psql = "Postgresql",
-    css = "CSS",
-    html = "HTML",
-    tailwind = "Tailwind",
-    unity = "Unity",
-}
-
-/**
- * A type of icon
- */
-export type SkillIcon = {
-    skill:skillEnum,
-    imgUrl:string,    
-}
+import { skillEnum } from "../models/enums/SkillEnum";
+import { SkillIcon } from "../models/types/SkillIcon";
 
 /**
  * Class with static methods for configuring skill icons

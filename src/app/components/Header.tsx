@@ -10,19 +10,19 @@ export default function Header() {
                 <nav className='flex flex-auto justify-end'>
                     <ol className="list-decimal list-inside flex flex-row items-center gap-x-10">
                         <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>                        
-                            <a href="">Home</a>
+                            <a href="#hero">Home</a>
                         </li>
                         <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
-                            <a href="">About</a>
+                            <a href="#about">About</a>
                         </li>
                         <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
-                            <a href="">Experience</a>
+                            <a href="#experience">Experience</a>
                         </li>
                         <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
-                            <a href="">Projects</a>
+                            <a href="#projects">Projects</a>
                         </li>
                         <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
-                            <a href="">Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                         <li className='list-none'>
                             <a 
