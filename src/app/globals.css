@@ -39,8 +39,6 @@ html, body {
   /* height: 100%; */
 }
 
-
-
 /* The actual content */
 .content {
   padding: 20px 30px;
@@ -50,3 +48,8 @@ html, body {
   border-radius: 6px;
 }
 
+@media screen and (max-width: 768px) {
+  .profile-hero {
+    background:none;
+  }
+}

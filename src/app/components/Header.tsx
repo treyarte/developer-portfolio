@@ -1,14 +1,42 @@
-import styles from './Header.module.css';
+"use client"
 
+import { useState } from 'react';
+import HeaderMobile from './HeaderMobile';
+import HamburgerBtn from './utils/HamburgerBtn';
+
+export type MobileMenuProps = {
+    isMobileOpen:boolean, 
+    toggleMobileMenu:() => void
+}
+
+/**
+ * Header component for display navigation links
+ * @returns 
+ */
 export default function Header() {
+    const [isMobileOpen, setMobileOpen] = useState(false);
+
+    /**
+     * Toggles the mobile open or close
+     */
+    const toggleMobileMenu = () => {
+        setMobileOpen(!isMobileOpen);
+    }
+
     return (
-        <header className="z-10 min-h-[var(--navbar-height)] bg-zinc-800 sticky top-0 flex justify-between backdrop-filter backdrop-blur-lg bg-opacity-30">
-            <div className="container mx-auto flex">
-                <div className="text-3xl flex items-center text-portfolio-orange">
-                    {"<Trey />"}
-                </div>
-                <nav className='flex flex-auto justify-end'>
-                    <ol className="list-decimal list-inside flex flex-row items-center gap-x-10">
+        <header 
+            className="z-10 min-h-[var(--navbar-height)] bg-zinc-800 sticky top-0 flex items-center 
+            sm:justify-around justify-between px-5 sm:px-0 backdrop-filter backdrop-blur-lg bg-opacity-30"
+        >
+                <a className="z-[100] h-[40px] block z-" href="/">
+                    <img 
+                        className="w-full h-full"
+                        src="/static/images/logo.png" 
+                        alt="logo" 
+                    />
+                </a>                
+                <nav className='flex'>
+                    <ol className="md:list-decimal md:list-inside sm:flex flex-row items-center gap-x-10 hidden">
                         <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>                        
                             <a href="#hero">Home</a>
                         </li>
@@ -33,8 +61,15 @@ export default function Header() {
                                 href="/static/files/treyvion_johnson_resume.pdf">Resume</a>
                         </li>
                     </ol>
+                    <HamburgerBtn 
+                        isMobileOpen={isMobileOpen} 
+                        toggleMobileMenu={toggleMobileMenu}
+                    />
                 </nav>
-            </div>
+                <HeaderMobile 
+                    isMobileOpen={isMobileOpen} 
+                    toggleMobileMenu={toggleMobileMenu}
+                />
         </header>
     )
 }

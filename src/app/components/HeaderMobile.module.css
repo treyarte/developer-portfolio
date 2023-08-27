@@ -1,0 +1,14 @@
+.mobile-header {
+    position:fixed;
+    z-index: 98;
+    width: 100%;
+    top:0;
+    left: 100%;
+    height: 100vh;
+    background-color: var(--zinc-dark);                
+    transition: 0.4s;
+}
+
+.mobile-header.is-open {
+	left: 0;
+}

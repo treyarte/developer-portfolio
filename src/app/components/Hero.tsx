@@ -2,7 +2,7 @@ import styles from './Hero.module.css';
 
 export default function Hero() {
     return (
-        <div className="profile-hero h-[calc(100vh-var(--navbar-height))] flex flex-col justify-center items-center">
+        <div id={"hero"} className="profile-hero h-[calc(100vh-var(--navbar-height))] flex flex-col justify-center items-center">
             <div className="h-40 w-40 relative">
                 <span className="z-0 absolute left-0 top-0 h-full w-full 
                 animate-spin-slow rounded-full bg-gradient-to-tr from-orange-400 to-orange-900"></span> 
