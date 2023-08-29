@@ -27,7 +27,7 @@ export default function Hero() {
                   </a>
                   </li>
               </ul>            
-            <h1 className={`${styles["greeting-text"]} text-4xl`}>Hello, I'm Trey, a <span className="text-portfolio-orange">Full-Stack</span> Engineer.</h1>
+            <h1 className={`${styles["greeting-text"]} text-center text-4xl`}>Hello, I'm Trey, a <span className="text-portfolio-orange">Full-Stack</span> Engineer.</h1>
             
             <div className="container flex justify-center mt-12">
               <a href='#about' className="border-solid border-2 border-portfolio-orange 

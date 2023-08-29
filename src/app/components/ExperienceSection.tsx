@@ -58,12 +58,12 @@ export default function ExperienceSection() {
     }
 
     return (
-        <section id="experience" className="h-[calc(100vh-var(--navbar-height))] pt-28">
+        <section id="experience" className="min-h-[calc(100vh-var(--navbar-height))] pt-48">
             <SectionTitle
                 titleText="03. Experience"
                 backgroundText="Experience"
             />
-            <div className="mt-20">
+            <div className="mt-20 md:px-0 px-3">
                 <Timeline 
                     timelineItems={createExperienceCardArr()}
                 />

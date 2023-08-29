@@ -27,7 +27,7 @@ export default function Timeline(props:TimelineProps){
     return (
         <div 
             className="relative max-w-[1200px] my-0 mx-auto 
-            after:content-[' '] after:absolute after:w-[6px] after:bg-white after:top-0 
+            after:content-[' '] after:absolute after:w-[6px] after:bg-zinc-700 after:top-0 
             after:bottom-0 sm:after:left-1/2 after:left-[31px] after:ml-[-3px]"
         >
             {timelineItems.map((item, idx) => (

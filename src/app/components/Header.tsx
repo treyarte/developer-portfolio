@@ -24,6 +24,7 @@ export default function Header() {
     }
 
     return (
+        <>
         <header 
             className="z-10 min-h-[var(--navbar-height)] bg-zinc-800 sticky top-0 flex items-center 
             sm:justify-around justify-between px-5 sm:px-0 backdrop-filter backdrop-blur-lg bg-opacity-30"
@@ -66,10 +67,11 @@ export default function Header() {
                         toggleMobileMenu={toggleMobileMenu}
                     />
                 </nav>
-                <HeaderMobile 
-                    isMobileOpen={isMobileOpen} 
-                    toggleMobileMenu={toggleMobileMenu}
-                />
         </header>
+                        <HeaderMobile 
+                        isMobileOpen={isMobileOpen} 
+                        toggleMobileMenu={toggleMobileMenu}
+                    />
+        </>
     )
 }
