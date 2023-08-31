@@ -8,4 +8,15 @@
 
 .greeting-text {
     min-height: 2.5rem;    
+    border-right: 3px solid var(--portfolio-orange);
+
+}
+
+.greeting-text.cursor {
+    animation: 
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
 }
