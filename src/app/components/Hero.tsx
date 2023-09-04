@@ -1,5 +1,5 @@
 "use client";
-import { createRef, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './Hero.module.css';
 
 const titles = [
@@ -12,11 +12,12 @@ const titles = [
 
 export default function Hero() {
     const [title, setTitle] = useState("");
-    const [typewriterComplete, setTypeWriterComplete] = useState(false)
-    const [titleCounter, setTitleCounter] = useState(0);
+    const [typewriterComplete, setTypeWriterComplete] = useState(false)    
     const indexRef = useRef(0);
     const titlesIndex = useRef(0);
     const greetingHeaderRef = useRef<HTMLHeadingElement>(null);
+    
+    //TODO refactor into component
     useEffect(() => {    
       if(typewriterComplete) {
         return;
@@ -43,6 +44,9 @@ export default function Hero() {
 
     useEffect(() => {
       if(!typewriterComplete) {
+        if(titlesIndex.current >= titles.length) {
+          titlesIndex.current = 0;
+        }
         return;
       }
       greetingHeaderRef.current?.classList.remove(styles.cursor);

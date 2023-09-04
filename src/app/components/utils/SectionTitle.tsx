@@ -6,7 +6,7 @@ type SectionTitleProps = {
 export default function SectionTitle(props:SectionTitleProps) {
     const {backgroundText, titleText} = props;
     return (
-        <div className="relative">
+        <div className="relative mb-20 md:px-0 px-3">
             <h2 className="text-center text-3xl text-portfolio-orange">{titleText}</h2>
             <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
             sm:text-9xl text-[4rem] z-0 text-gray-300 opacity-10">

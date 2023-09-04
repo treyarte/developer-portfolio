@@ -63,7 +63,7 @@ export default function ExperienceSection() {
                 titleText="03. Experience"
                 backgroundText="Experience"
             />
-            <div className="mt-20 md:px-0 px-3">
+            <div>
                 <Timeline 
                     timelineItems={createExperienceCardArr()}
                 />

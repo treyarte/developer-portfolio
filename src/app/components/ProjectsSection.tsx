@@ -1,4 +1,5 @@
 import SectionTitle from "./utils/SectionTitle";
+import ProjectItem from "./utils/projects/ProjectItem";
 
 export default function ProjectsSection() {
     return (
@@ -7,6 +8,11 @@ export default function ProjectsSection() {
                 backgroundText={"Projects"} 
                 titleText={"04. Projects"}
             />
+            <ul className="flex justify-center">
+                <li>
+                    <ProjectItem/>
+                </li>
+            </ul>
         </section>
     )
 }

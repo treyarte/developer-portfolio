@@ -8,7 +8,7 @@ export default function About() {
                 backgroundText="About"
                 titleText="02. About"
             />
-            <div className="flex justify-center lg:items-start items-center flex-col lg:flex-row  gap-20 mt-20 text-lg ">                
+            <div className="flex justify-center lg:items-start items-center flex-col lg:flex-row  gap-20 text-lg ">                
                 <div className="lg:w-1/3 w-auto">
                     <h4 className="text-3xl font-bold mb-4 text-center lg:text-start">A little bit about me</h4>
                     <p className="leading-loose px-8 lg:px-0">
