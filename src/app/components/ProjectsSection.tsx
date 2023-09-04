@@ -9,7 +9,7 @@ export default function ProjectsSection() {
                 backgroundText={"Projects"} 
                 titleText={"04. Projects"}
             />
-            <ul className="flex justify-center px-20 md:px-0">
+            <ul className="flex justify-center px-5 sm:px-20 md:px-0">
                 <li>
                     <ProjectItem/>
                     <ProjectItemMobile/>
