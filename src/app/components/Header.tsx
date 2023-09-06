@@ -50,9 +50,9 @@ export default function Header() {
                         <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
                             <a href="#projects">Projects</a>
                         </li>
-                        <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
+                        {/* <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
                             <a href="#contact">Contact</a>
-                        </li>
+                        </li> */}
                         <li className='list-none'>
                             <a 
                                 className='inline-block bg-portfolio-orange hover:bg-orange-600 font-semibold 

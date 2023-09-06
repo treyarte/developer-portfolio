@@ -8,11 +8,11 @@ import ProjectsSection from './components/ProjectsSection'
 export default function Home() {
   return (
     <main className='text-white'>
-      {/* <Header/>       */}
-        <Hero/>      
-        {/* <About/>
+      <Header/>      
+        <Hero />      
+        <About/>
         <ExperienceSection/>
-        <ProjectsSection/> */}
+        <ProjectsSection/>
     </main>
   )
 }
