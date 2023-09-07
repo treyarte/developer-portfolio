@@ -22,8 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${roboto.className}  dark:bg-zinc-900`}>{children}
-      <script src="https://kit.fontawesome.com/858809a5ac.js" crossOrigin="anonymous"></script>
+      <body className={`${roboto.className}  dark:bg-zinc-900`}>{children}      
       </body>
     </html>
   )

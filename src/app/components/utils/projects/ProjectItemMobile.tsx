@@ -1,3 +1,4 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function ProjectItemMobile() {
     return (
@@ -23,8 +24,8 @@ export default function ProjectItemMobile() {
                 <ul className="flex flex-row">
                     <li>
                         <a target="blank" href="https://github.com/treyarte/2d-platform-tutorial" 
-                            className="text-xl cursor-pointer hover:text-portfolio-orange">
-                                <span className="fa-brands fa-github"></span>
+                            className="text-xl cursor-pointer hover:text-zinc-300">
+                                <GitHubIcon/>
                         </a>                       
                     </li>
                 </ul>

@@ -1,7 +1,6 @@
 
 .project-img-container::before {
-    content:"";
-    background: url('../../../../../public/static/images/projects/lava-demo.png');
+    content:"";    
     background-size: cover;
     position: absolute;
     width: 36.25rem;
@@ -22,14 +21,7 @@
 
 @media (min-width: 1024px) { 
     .project-img-container::before {
-        content:"";
-        background: url('../../../../../public/static/images/projects/lava-demo.png');
-        background-size: cover;
-        position: absolute;
         width: 36.25rem;
-        top: 0;
         left: 10.25rem;
-        border-radius: 0.375rem;
-        height: 100%;
     }
 }

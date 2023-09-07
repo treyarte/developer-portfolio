@@ -1,31 +1,70 @@
+import { ProjectType } from '@/app/models/types/ProjectType';
 import styles from './ProjectItem.module.css'
-export default function ProjectItem() {
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { before } from 'node:test';
+
+export type ProjectItemProps = {
+    project:ProjectType
+}
+
+export default function ProjectItem(props:ProjectItemProps) {
+    const {
+        name,
+        description,
+        imgUrl,
+        altImgText,
+        projectLink,
+        ariaLabel,
+        projectSrc,
+        technologies
+    } = props.project;
+
+    const create = () => {
+        if(name === "My Droplist") {
+            return `before:bg-mydroplist-web`
+        } else if (name === "My Droplist Mobile") {
+            return `before:bg-mydroplist-mobile`
+        } else if (name === "Connect Four") {
+            return `before:bg-connect-four`
+        } else {
+            return `before:bg-lava-demo`    
+        }        
+    }
 
     return (
-        <div className="md:flex flex-row hidden">
-            <div className="relative w-[300px] lg:w-[580px] ">
-                <div className={`w-full ${styles["project-img-container"]} top-0 z-0 right-[-25%] rounded-md`}>
+        <div className="md:flex flex-row md:justify-center hidden">
+            <div className="relative w-[300px] lg:min-w-[580px] max-h-[364px]">
+                <div className={`w-full ${styles["project-img-container"]} 
+               ${create()} top-0 z-0 right-[-25%] rounded-md   max-h-[364px]`}>
                     <img className="w-full rounded-md invisible"
-                        src="/static/images/projects/lava-demo.png" alt="lava demo image" />
+                        src={imgUrl} alt={altImgText} />
                 </div>
             </div>
             <div className="min-h-[300px pt-14 text-right z-[1] px-[100px]">
                 <div className="text-lg text-portfolio-orange">Featured Project</div>
                 <h4 className="text-2xl hover:text-portfolio-orange mb-5 w-fit inline-block">
                     <a 
-                        href="https://play.unity.com/mg/other/webgl-builds-327790" 
-                        target="blank" aria-label="Platformer demo link"
+                        href={projectLink}
+                        target="blank" aria-label={ariaLabel}
                     >
-                        2D Platformer Demo
+                        {name}
                     </a>                    
                 </h4>
                 <p className="max-w-[500px] px-5 py-5 bg-zinc-800 rounded-md mb-5">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In repellat officia sint dolores magnam fugiat excepturi esse vel atque recusandae inventore, eaque accusamus obcaecati doloribus ducimus. Aperiam unde ab temporibus.
+                    {description}
                 </p>
                 <ul className="flex flex-row text-right justify-end gap-5">
-                    <li>Unity</li>
-                    <li>C#/.NET</li>
-                    <li>WebGL</li>
+                    {technologies.map(tech => (
+                        <li>{tech}</li>
+                    ))}                                                            
+                </ul>
+                <ul className="flex flex-row justify-end mt-5">
+                    <li>
+                        <a target="blank" href={projectSrc} 
+                            aria-label='Source Code Link' className="text-xl cursor-pointer hover:text-zinc-300">
+                                <GitHubIcon/>
+                        </a>                       
+                    </li>
                 </ul>
             </div>
         </div>

@@ -1,3 +1,4 @@
+import Projects from "../models/Projects";
 import SectionTitle from "./utils/SectionTitle";
 import ProjectItem from "./utils/projects/ProjectItem";
 import ProjectItemMobile from "./utils/projects/ProjectItemMobile";
@@ -9,10 +10,16 @@ export default function ProjectsSection() {
                 backgroundText={"Projects"} 
                 titleText={"04. Projects"}
             />
-            <ul className="flex justify-center px-5 sm:px-20 md:px-0">
+            <ul className="flex flex-col justify-center px-5 sm:px-20 md:px-0">
+                {
+                    Projects.map(project => (
+                        <li className="py-5">
+                            <ProjectItem project={project}/>
+                            <ProjectItemMobile/>
+                        </li>
+                    ))
+                }
                 <li>
-                    <ProjectItem/>
-                    <ProjectItemMobile/>
                 </li>
             </ul>
         </section>
