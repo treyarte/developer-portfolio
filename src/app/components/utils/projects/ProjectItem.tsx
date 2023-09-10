@@ -1,7 +1,7 @@
 import { ProjectType } from '@/app/models/types/ProjectType';
-import styles from './ProjectItem.module.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { before } from 'node:test';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import styles from './ProjectItem.module.css';
 
 export type ProjectItemProps = {
     project:ProjectType
@@ -19,7 +19,7 @@ export default function ProjectItem(props:ProjectItemProps) {
         technologies
     } = props.project;
 
-    const create = () => {
+    const createBeforeImage = () => {
         if(name === "My Droplist") {
             return `before:bg-mydroplist-web`
         } else if (name === "My Droplist Mobile") {
@@ -35,7 +35,7 @@ export default function ProjectItem(props:ProjectItemProps) {
         <div className="md:flex flex-row md:justify-center hidden">
             <div className="relative w-[300px] lg:min-w-[580px] max-h-[364px]">
                 <div className={`w-full ${styles["project-img-container"]} 
-               ${create()} top-0 z-0 right-[-25%] rounded-md   max-h-[364px]`}>
+               ${createBeforeImage()} top-0 z-0 right-[-25%] rounded-md max-h-[364px]`}>
                     <img className="w-full rounded-md invisible"
                         src={imgUrl} alt={altImgText} />
                 </div>
@@ -50,19 +50,25 @@ export default function ProjectItem(props:ProjectItemProps) {
                         {name}
                     </a>                    
                 </h4>
-                <p className="max-w-[500px] px-5 py-5 bg-zinc-800 rounded-md mb-5">
+                <p className="max-w-[500px] px-5 py-5 bg-zinc-800 rounded-md mb-5 text-left">
                     {description}
                 </p>
-                <ul className="flex flex-row text-right justify-end gap-5">
+                <ul className="flex flex-row text-right justify-end gap-5 flex-wrap">
                     {technologies.map(tech => (
-                        <li>{tech}</li>
+                        <li className='bg-zinc-800 rounded-md p-1'>{tech}</li>
                     ))}                                                            
                 </ul>
-                <ul className="flex flex-row justify-end mt-5">
+                <ul className="flex flex-row justify-end mt-5 gap-5">
                     <li>
                         <a target="blank" href={projectSrc} 
                             aria-label='Source Code Link' className="text-xl cursor-pointer hover:text-zinc-300">
                                 <GitHubIcon/>
+                        </a>                       
+                    </li>
+                    <li>
+                        <a target="blank" href={projectLink} 
+                            className="text-xl cursor-pointer hover:text-zinc-300">
+                                <OpenInNewIcon/>
                         </a>                       
                     </li>
                 </ul>

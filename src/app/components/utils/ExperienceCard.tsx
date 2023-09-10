@@ -23,6 +23,9 @@ export default function ExperienceCard(props:ExperienceCardProps) {
                     <span className="text-lg font-semibold">{experience.jobTitle} - {experience.company}</span>
                 </a>
             </h3>
+            <div>
+                {experience.years}
+            </div>
             <p className="">
                 {experience.description}
             </p>

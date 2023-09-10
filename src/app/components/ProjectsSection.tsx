@@ -15,7 +15,7 @@ export default function ProjectsSection() {
                     Projects.map(project => (
                         <li className="py-5">
                             <ProjectItem project={project}/>
-                            <ProjectItemMobile/>
+                            <ProjectItemMobile project={project}/>
                         </li>
                     ))
                 }

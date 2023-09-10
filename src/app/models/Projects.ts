@@ -19,9 +19,7 @@ const Projects:ProjectType[] = [
     },
     {
         name: "My Droplist",
-        description: `A web application that was created for my capstone project at Springboard's coding bootcamp. 
-        The app helps facilitate better communication between stockers and forklift drivers and provide record-keeping for users. 
-        See your forklift drivers' performance by creating graphs of the droplists they have completed, accepted, and declined.`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. In repellat officia sint dolores magnam fugiat excepturi esse vel atque recusandae inventore, eaque accusamus obcaecati doloribus ducimus. Aperiam unde ab temporibus.`,
         imgUrl: "/static/images/projects/mydroplist-web.png",
         altImgText: "Project Image My Droplist",
         projectLink: "https://play.unity.com/mg/other/webgl-builds-327790",
@@ -38,9 +36,7 @@ const Projects:ProjectType[] = [
     },
     {
         name: "My Droplist Mobile",
-        description: `My Droplist is a mobile app for creating droplist for forklift drivers and stockers. 
-        improving upon the previous web version, it adds mobile-specific features like droplist notifications, 
-        swiping for item viewing, and simplified droplist creation. These enhancements create a better mobile experience and encourage more users to utilize the app.`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. In repellat officia sint dolores magnam fugiat excepturi esse vel atque recusandae inventore, eaque accusamus obcaecati doloribus ducimus. Aperiam unde ab temporibus.`,
         imgUrl: "/static/images/projects/mydroplist-mobile.png",
         altImgText: "Project Image Lava Demo",
         projectLink: "https://play.unity.com/mg/other/webgl-builds-327790",
@@ -56,7 +52,7 @@ const Projects:ProjectType[] = [
     },
     {
         name: "Connect Four",
-        description: `Connect four browser game written JavaScript`,
+        description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. In repellat officia sint dolores magnam fugiat excepturi esse vel atque recusandae inventore, eaque accusamus obcaecati doloribus ducimus. Aperiam unde ab temporibus.`,
         imgUrl: "/static/images/projects/connect-four.png",
         altImgText: "Project Image Connect Four",
         projectLink: "https://treyarte.github.io/connectfour",

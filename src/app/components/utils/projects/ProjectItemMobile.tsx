@@ -1,31 +1,59 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { ProjectItemProps } from './ProjectItem';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-export default function ProjectItemMobile() {
+export default function ProjectItemMobile(props:ProjectItemProps) {
+    const {
+        name,
+        description,
+        projectLink,
+        ariaLabel,
+        projectSrc,
+        technologies
+    } = props.project;
+
+    const createBgImg = () => {
+        if(name === "My Droplist") {
+            return `bg-mydroplist-web`
+        } else if (name === "My Droplist Mobile") {
+            return `bg-mydroplist-mobile`
+        } else if (name === "Connect Four") {
+            return `bg-connect-four`
+        } else {
+            return `bg-lava-demo`    
+        }        
+    }
     return (
-        <div className="md:hidden bg-[url('/static/images/projects/lava-demo.png')] bg-cover rounded-md">
+        <div className={`md:hidden ${createBgImg()} bg-cover rounded-md`}>
             <div className="min-h-[300px pt-14 z-[1] px-10 py-5 bg-zinc-800 rounded-md bg-opacity-80">
                 <div className="text-lg text-portfolio-orange">Featured Project</div>
                 <h4 className="text-2xl hover:text-portfolio-orange mb-5 w-fit inline-block">
                     <a 
-                        href="https://play.unity.com/mg/other/webgl-builds-327790" 
-                        target="blank" aria-label="Platformer demo link"
+                        href={projectLink}
+                        target="blank" aria-label={ariaLabel}
                     >
-                        2D Platformer Demo
+                        {name}
                     </a>                    
                 </h4>
                 <p className="max-w-[500px] mb-5">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In repellat officia sint dolores magnam fugiat excepturi esse vel atque recusandae inventore, eaque accusamus obcaecati doloribus ducimus. Aperiam unde ab temporibus.
+                    {description}
                 </p>
-                <ul className="flex flex-row text-right justify-end gap-5">
-                    <li>Unity</li>
-                    <li>C#/.NET</li>
-                    <li>WebGL</li>
+                <ul className="flex flex-row text-right justify-end gap-5 flex-wrap">
+                    {technologies.map(tech => (
+                        <li>{tech}</li>
+                    ))}  
                 </ul>
-                <ul className="flex flex-row">
+                <ul className="flex flex-row flex-wrap gap-5">
                     <li>
-                        <a target="blank" href="https://github.com/treyarte/2d-platform-tutorial" 
+                        <a target="blank" href={projectSrc} 
                             className="text-xl cursor-pointer hover:text-zinc-300">
                                 <GitHubIcon/>
+                        </a>                       
+                    </li>
+                    <li>
+                        <a target="blank" href={projectLink} 
+                            className="text-xl cursor-pointer hover:text-zinc-300">
+                                <OpenInNewIcon/>
                         </a>                       
                     </li>
                 </ul>
