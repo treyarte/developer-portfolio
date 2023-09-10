@@ -12,10 +12,11 @@ export default function About() {
                 <div className="lg:w-1/3 w-auto">
                     <h4 className="text-3xl font-bold mb-4 text-center lg:text-start">A little bit about me</h4>
                     <p className="leading-loose px-8 lg:px-0">
-                        Hi, my name is Treyvion Johnson I am a Full-Stack developer in the Houston, TX area.
-                        I am currently enrolled in Springboard’s Software Engineering career track to enhance my knowledge in newer web technologies such as React.js, Node.js, and Express.js. Also, I have professional experience working with web technologies such as JavaScript, Ruby on Rails, and PostgreSQL.
-                        After graduating with a Bachelor of Science in Computer Information Systems, I gained professional experience working in a startup environment developing Full Stack applications.
-                        Here are some technologies I enjoy working with:
+                    Hi, my name is Treyvion Johnson. I am a Full-Stack developer in the Houston, TX area. I am currently employed at 
+                    {" "}<a target="_blank" className="text-portfolio-orange underline hover:text-orange-300" href="https://www.bouncingpixel.com" aria-label="bouncing pixel link">Bouncing Pixel</a>, 
+                    where I work closely with clients to develop user-friendly software solutions. I am also an avid gamer, 
+                    to the extent that in 2023, I began developing my own games using C# Unity. Whether it's game development or web development, 
+                    I take pleasure in exploring and refining my technical skills. Here are some technologies I enjoy working with:
                     </p>
                 </div>                   
                 <div className="lg:w-1/3 w-auto">

@@ -1,7 +1,7 @@
 
 
 .left {
-    left: 0;
+    left: 1px;
   }
   
   .right {
@@ -43,7 +43,7 @@
     adjusts right side circles to fit on the timeline
   */
   .right::after {
-    left: -9px;
+    left: -10px;
   }
 
   /* Media queries - Responsive timeline on screens less than 600px wide */

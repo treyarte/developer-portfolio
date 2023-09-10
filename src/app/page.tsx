@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
+import Contact from './components/Contact'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <About/>
         <ExperienceSection/>
         <ProjectsSection/>
+        {/* <Contact/> */}
     </main>
   )
 }

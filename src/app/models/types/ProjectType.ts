@@ -1,3 +1,6 @@
+/**
+ * properties for a project obj
+ */
 export type ProjectType = {
     name:string;
     description:string;

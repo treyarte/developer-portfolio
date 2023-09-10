@@ -53,7 +53,7 @@ export default function ProjectItem(props:ProjectItemProps) {
                 <p className="max-w-[500px] px-5 py-5 bg-zinc-800 rounded-md mb-5 text-left">
                     {description}
                 </p>
-                <ul className="flex flex-row text-right justify-end gap-5 flex-wrap">
+                <ul className="max-w-[500px] flex flex-row text-right justify-end gap-5 flex-wrap">
                     {technologies.map(tech => (
                         <li className='bg-zinc-800 rounded-md p-1'>{tech}</li>
                     ))}                                                            

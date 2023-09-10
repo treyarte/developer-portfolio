@@ -4,6 +4,7 @@
 export enum skillEnum {
     csharp = "C#/.Net",
     javaScript = "JavaScript",
+    typeScript = "TypeScript",
     go = "Go",
     python = "Python",
     nextjs = "Next.JS",
