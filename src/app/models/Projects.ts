@@ -1,5 +1,7 @@
 import { ProjectType } from "./types/ProjectType"
-
+/**
+ * A list of projects
+ */
 const Projects:ProjectType[] = [
     {
         name: "Lava Demo",
