@@ -38,7 +38,7 @@ const Projects:ProjectType[] = [
     {
         name: "My Droplist Mobile",
         description: `This mobile version sets out to be an improvement of the web version. My Droplist web app used a responsive design to make it feel natural on the phone. Since it was a web application, features such as swiping and notifications could not be utilized, thus making the app not a truly mobile experience.`,
-        imgUrl: "/static/images/projects/mydroplist-mobile.jpg",
+        imgUrl: "/static/images/projects/mydroplist-mobile.png",
         altImgText: "Project Image Lava Demo",
         projectLink: "#",
         ariaLabel: "My Droplist Mobile Link",

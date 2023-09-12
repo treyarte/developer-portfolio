@@ -4,14 +4,60 @@ import { ContactType } from "@/app/models/types/ContactType";
 import { ErrorMessage, Formik } from "formik";
 import * as Yup from "yup";
 import CharacterLimit from "../utils/CharacterLimit";
+import axios from "axios";
+import { useGoogleReCAPTCHA } from "@/app/hooks/useGoogleReCAPTCHA ";
+import { isNullOrWhiteSpace } from "@/app/helpers/StringHelper";
+import { useEffect, useState } from "react";
 
 const maxMsgLe = 2000;
+
+
+const clientKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
 
 /**
  * Renders the contact form
  * @returns 
  */
 export default function ContactForm() {
+    useGoogleReCAPTCHA();
+    const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
+
+        /**
+     * If this callback occurs that means the box was checked 
+     * and we need to enable the submit button
+     */
+        const onRecaptchaCallback = () => {
+            setIsCaptchaChecked(true);
+        }
+    
+        /**
+         * If this callback occurs that means the captcha has expired 
+         * and we need to disable the submit button
+         */
+        const onRecaptchaExpiredCallback = () => {
+            setIsCaptchaChecked(false);
+        }
+
+
+        /**To handle disabling and enabling the submit button on recaptcha click the callbacks 
+     * need to be on the window object next will throw an invalid data-callback/etc error
+     * **/
+        useEffect(() => {
+            function onComponentMount() {            
+                (window as any).onRecaptchaCallback = onRecaptchaCallback;
+                
+                (window as any).onRecaptchaExpiredCallback = onRecaptchaExpiredCallback;
+    
+                //When component unmounts remove the captcha callbacks from the window object
+                return () => {
+                    (window as any).onRecaptchaCallback = null;
+                    (window as any).onRecaptchaExpiredCallback = null;
+                }
+            }
+            onComponentMount();
+        }, [])
+
     /**
      * The initial values of the form
      */
@@ -21,7 +67,7 @@ export default function ContactForm() {
         subject: "",
         message: ""
     }
-
+    
     /**
      * Schema validation for our form
      */
@@ -44,8 +90,35 @@ export default function ContactForm() {
 
     const validationSchema = Yup.object(yupValidation);
 
-    const onSubmit = () => {
+    const onSubmit = (data:ContactType, formik:any) => {
+        const token = getRecaptchaToken();
+debugger
+        if(!token || isNullOrWhiteSpace(token)) {
+            // toast.error("Please verify you are not a robot.");
+            return;
+        }
+        
+        axios.post("http://localhost:3000/api/google-recaptcha-verification", {data})
+    }
 
+        /**
+     * Get a captcha token from the grecaptcha that will be validated on the backend
+     * @returns 
+     */
+    const getRecaptchaToken = () => {
+        if(window == null) {
+            return null;
+        }
+        try {                        
+            const gRecaptcha = window["grecaptcha" as keyof typeof window];
+
+            const captchaToken = gRecaptcha.getResponse();            
+            
+            return captchaToken;
+        } catch (error) {
+            console.error(error);
+            return null
+        }
     }
 
     return (
@@ -165,8 +238,22 @@ export default function ContactForm() {
                             />
                         </div>
                     </div>
+                    <div className="recaptcha-container sm:flex sm:justify-end ">
+                            {clientKey && !isNullOrWhiteSpace(clientKey) && (
+                                <div 
+                                    id="Grecaptcha" 
+                                    className="g-recaptcha" 
+                                    data-sitekey={clientKey} 
+                                    data-callback={"onRecaptchaCallback"} 
+                                    data-expired-callback="onRecaptchaExpiredCallback"
+                                ></div>
+                            )}
+                        </div>
                     <div className="flex justify-end mt-5">
-                        <button className="px-6 py-2 hover:bg-portfolio-orange rounded-md bg-orange-600">Submit</button>
+                        <button 
+                            type="submit"
+                            className="px-6 py-2 hover:bg-portfolio-orange rounded-md bg-orange-600"
+                            >Submit</button>
                     </div>
                 </form>
             )}            

@@ -14,7 +14,7 @@ export default function Home() {
         <About/>
         <ExperienceSection/>
         <ProjectsSection/>
-        {/* <Contact/> */}
+        <Contact/>
     </main>
   )
 }
