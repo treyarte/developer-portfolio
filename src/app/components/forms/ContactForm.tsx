@@ -8,6 +8,7 @@ import axios from "axios";
 import { useGoogleReCAPTCHA } from "@/app/hooks/useGoogleReCAPTCHA ";
 import { isNullOrWhiteSpace } from "@/app/helpers/StringHelper";
 import { useEffect, useState } from "react";
+import { validateGoogleCaptcha } from "@/services/PortfolioServices";
 
 const maxMsgLe = 2000;
 
@@ -90,15 +91,15 @@ export default function ContactForm() {
 
     const validationSchema = Yup.object(yupValidation);
 
-    const onSubmit = (data:ContactType, formik:any) => {
+    const onSubmit = async (data:ContactType, formik:any) => {
         const token = getRecaptchaToken();
-debugger
+
         if(!token || isNullOrWhiteSpace(token)) {
             // toast.error("Please verify you are not a robot.");
             return;
         }
         
-        axios.post("http://localhost:3000/api/google-recaptcha-verification", {data})
+        await validateGoogleCaptcha(token);
     }
 
         /**

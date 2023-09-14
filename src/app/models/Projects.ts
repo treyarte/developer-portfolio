@@ -16,7 +16,8 @@ const Projects:ProjectType[] = [
             "Unity",
             "C# .NET",
             "WebGL"
-        ]
+        ],
+        isLive:true,
     },
     {
         name: "My Droplist",
@@ -33,7 +34,8 @@ const Projects:ProjectType[] = [
             "Jinja2",
             "SQLAlchemy",
             "PostgreSQL"
-        ]
+        ],
+        isLive:true
     },
     {
         name: "My Droplist Mobile",
@@ -49,7 +51,8 @@ const Projects:ProjectType[] = [
             "PostgreSQL",
             "Node.JS",
             "Express"
-        ]
+        ],
+        isLive:false
     },
     {
         name: "Connect Four",
@@ -63,7 +66,8 @@ const Projects:ProjectType[] = [
             "HTML",
             "CSS",
             "JavaScript"
-        ]
+        ],
+        isLive:true
     },
 ]
 

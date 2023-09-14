@@ -16,7 +16,8 @@ export default function ProjectItem(props:ProjectItemProps) {
         projectLink,
         ariaLabel,
         projectSrc,
-        technologies
+        technologies,
+        isLive,
     } = props.project;
 
     const createBeforeImage = () => {
@@ -42,13 +43,24 @@ export default function ProjectItem(props:ProjectItemProps) {
             </div>
             <div className="min-h-[300px pt-14 text-right z-[1] px-[100px]">
                 <div className="text-lg text-portfolio-orange">Featured Project</div>
-                <h4 className="text-2xl hover:text-portfolio-orange mb-5 w-fit inline-block">
-                    <a 
-                        href={projectLink}
-                        target="blank" aria-label={ariaLabel}
-                    >
-                        {name}
-                    </a>                    
+                <h4 className={`text-2xl ${isLive && ('hover:text-portfolio-orange')}  mb-5 w-fit inline-block`}>
+                    {
+                        isLive ? 
+                        (
+                            <a 
+                            href={projectLink}
+                            target="blank" aria-label={ariaLabel}
+                        >
+                            {name}
+                        </a>  
+                        ) 
+                        : 
+                        (
+                            <>
+                            {name}
+                            </>
+                        )
+                    }                 
                 </h4>
                 <p className="max-w-[500px] px-5 py-5 bg-zinc-800 rounded-md mb-5 text-left">
                     {description}
@@ -65,12 +77,15 @@ export default function ProjectItem(props:ProjectItemProps) {
                                 <GitHubIcon/>
                         </a>                       
                     </li>
-                    <li>
-                        <a target="blank" href={projectLink} 
-                            className="text-xl cursor-pointer hover:text-zinc-300">
+                    {isLive && (
+
+                        <li>
+                            <a target="blank" href={projectLink} 
+                                className="text-xl cursor-pointer hover:text-zinc-300">
                                 <OpenInNewIcon/>
-                        </a>                       
-                    </li>
+                            </a>                       
+                        </li>
+                    )}
                 </ul>
             </div>
         </div>

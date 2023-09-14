@@ -10,4 +10,5 @@ export type ProjectType = {
     ariaLabel:string;
     projectSrc:string;
     technologies:string[];    
+    isLive:boolean;
 }

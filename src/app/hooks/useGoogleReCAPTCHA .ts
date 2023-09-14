@@ -7,8 +7,7 @@ const clientKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
  */
 export const useGoogleReCAPTCHA = () => {
 
-    useEffect(() => {
-        console.info("CLIENT", clientKey)
+    useEffect(() => {        
         const script = document.createElement("script");
         
         script.async = true;
