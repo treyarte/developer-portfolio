@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import * as requestIp from "request-ip";
 
 const CAPTCHA_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
@@ -7,7 +8,7 @@ export async function POST(request:NextRequest) {
     try {
         const bodyJson = await request.json();    
         //@ts-ignore
-        let ip =  request.headers["x-real-ip"] || request.headers["x-forwarded-for"] || request.headers["client-ip"];
+        let ip =  requestIp.getClientIp(request);
         
         console.info("IP ADDRESS", ip)    
         const token = bodyJson.token;
