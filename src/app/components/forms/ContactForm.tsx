@@ -9,6 +9,7 @@ import { useGoogleReCAPTCHA } from "@/app/hooks/useGoogleReCAPTCHA ";
 import { isNullOrWhiteSpace } from "@/app/helpers/StringHelper";
 import { useEffect, useState } from "react";
 import { validateGoogleCaptcha } from "@/services/PortfolioServices";
+import { usePathname } from 'next/navigation'
 
 const maxMsgLe = 2000;
 
@@ -23,6 +24,8 @@ const clientKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 export default function ContactForm() {
     useGoogleReCAPTCHA();
     const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
+
+    const path = usePathname()
 
         /**
      * If this callback occurs that means the box was checked 
@@ -99,7 +102,9 @@ export default function ContactForm() {
             return;
         }
         
-        await validateGoogleCaptcha(token);
+        var res = await validateGoogleCaptcha(token, window.location.origin);
+
+        console.info(res);
     }
 
         /**

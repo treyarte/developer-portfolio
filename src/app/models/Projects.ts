@@ -6,7 +6,7 @@ const Projects:ProjectType[] = [
     {
         name: "Lava Demo",
         description: `
-        This Unity project is a 2D platformer designed as a testing ground for various mechanics that will be used in my future platforming games. The tools and features developed here are created with a focus on reusability. During this project, I gained valuable experience in implementing concepts like the observer pattern, which proved useful for handling player deaths and stage resets.`,
+        This Unity project is a 2D platformer designed as a testing ground for various mechanics used in my future platforming games. The tools and features developed here are created with a focus on reusability. During this project, I gained valuable experience implementing concepts like the observer pattern, which was helpful in handling player deaths and stage resets.`,
         imgUrl: "/static/images/projects/lava-demo.png",
         altImgText: "Project Image Lava Demo",
         projectLink: "https://play.unity.com/mg/other/webgl-builds-327790",

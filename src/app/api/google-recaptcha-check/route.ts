@@ -11,7 +11,7 @@ export async function POST(request:NextRequest) {
   
         console.info("IP ADDRESS", ip)    
         const token = bodyJson.token;
-        return new Response(JSON.stringify({token}));
+        return new Response(JSON.stringify({token, ip}));
         
     } catch (error) {
         console.error(error);             
