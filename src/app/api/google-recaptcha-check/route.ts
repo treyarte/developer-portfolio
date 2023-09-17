@@ -3,6 +3,15 @@ import * as requestIp from "request-ip";
 
 const CAPTCHA_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
+export async function GET(req:any, res:any) {
+    try {
+        let ip =  requestIp.getClientIp(req);
+        return new Response(JSON.stringify({ip}));
+    } catch (error) {
+        console.error(error);
+        return new Response(JSON.stringify({error}));
+    }
+}
 
 export async function POST(request:NextRequest) {
     try {
