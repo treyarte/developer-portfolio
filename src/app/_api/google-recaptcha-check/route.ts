@@ -1,3 +1,11 @@
+/**
+ * NOT IN USE:
+ * Because the next 13 way of doing routes can't get the clients IP address, we
+ * have to use the old way of doing things.
+ * This is kept as a reference on how to do api routes in next 13.
+ * 
+ */
+
 import { NextRequest } from "next/server";
 import * as requestIp from "request-ip";
 
@@ -13,11 +21,12 @@ export async function GET(req:any, res:any) {
     }
 }
 
-export async function POST(request:NextRequest) {
+export async function POST(req:NextRequest) {
     try {
-        const bodyJson = await request.json();    
-        //@ts-ignore
-        let ip =  requestIp.getClientIp(request);
+        const bodyJson = await req.json();    
+        
+        let ip =  req.headers.get("x-real-ip") || req.headers.get("x-forwarded-for") 
+                    || req.headers.get("client-ip") || req.ip;
         
         console.info("IP ADDRESS", ip)    
         const token = bodyJson.token;

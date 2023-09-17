@@ -5,7 +5,7 @@ import axios from "axios";
  */
 export async function validateGoogleCaptcha(token:string, url:string) {
     try {
-        const res = await axios.post(`${window.location.origin}/api/google-recaptcha-check`, {token});
+        const res = await axios.post(`${window.location.origin}/api/google-recaptcha-verify`, {token});
         return res.data;
     } catch (error) {
         console.error(error);

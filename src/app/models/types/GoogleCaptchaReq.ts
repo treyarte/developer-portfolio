@@ -1,5 +1,5 @@
-export type GooglecaptchaReq = {
+export type GoogleCaptchaReq = {
     secret:string;
-    response:string;
-    remoteIp:string
+    response:string; //the token
+    remoteIp:string;
 }
