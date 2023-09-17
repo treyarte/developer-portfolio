@@ -3,9 +3,9 @@ import SectionTitle from "./utils/SectionTitle";
 
 export default function Contact() {
     return (
-        <section className="py-28">
+        <section id="contact" className="py-28">
             <SectionTitle 
-                backgroundText={"Contact!!!"} 
+                backgroundText={"Contact"} 
                 titleText={"05. Contact"}
             />
             <ContactForm/>

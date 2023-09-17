@@ -61,14 +61,14 @@ export default function HeaderMobile(props:MobileMenuProps) {
                         Projects
                     </a>
                 </li>
-                {/* <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
+                <li className='marker:text-portfolio-orange hover:text-portfolio-orange'>
                     <a 
                         onClick={toggleMobileMenu} 
                         href="#contact"
                     >
                         Contact
                     </a>
-                </li> */}
+                </li>
                 <li className='list-none'>
                     <a 
                         onClick={toggleMobileMenu} 
