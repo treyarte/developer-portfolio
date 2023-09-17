@@ -51,6 +51,18 @@ html, body {
   border-radius: 6px;
 }
 
+.g-recaptcha {
+  transform: scale(.77);
+  transform-origin: 0 0;
+}
+
+@media screen and (min-width: 640px) {
+  .g-recaptcha {
+    transform:none;
+    transform-origin:unset;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .profile-hero {
     background:  linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/static/images/background-img-md.jpg") no-repeat center center fixed;
