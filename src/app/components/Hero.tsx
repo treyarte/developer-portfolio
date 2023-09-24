@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const titles = [
-  "Full-Stack Engineer.",
+  "Software Engineer.",
   "Game Developer.",
   "Gamer."
 ]
