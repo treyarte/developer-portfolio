@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Roboto } from 'next/font/google'
+import Script from 'next/script';
 import { Toaster } from "react-hot-toast";
  
 const roboto = Roboto({
@@ -46,7 +47,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">       
+    <html lang="en" className="scroll-smooth">   
+        <Script async src='https://www.googletagmanager.com/gtag/js?id=G-HSF7PEYD0F'></Script>
+        <Script>
+          {
+            `        
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'G-HSF7PEYD0F');
+            `
+          }
+        </Script>
       <body className={`${roboto.className}  dark:bg-zinc-900`}>
       <Toaster position="top-center"
                         reverseOrder={false}
