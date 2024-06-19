@@ -19,24 +19,24 @@ const Projects:ProjectType[] = [
         ],
         isLive:true,
     },
-    {
-        name: "My Droplist",
-        description: `At Costco, we frequently hear the phrase "It wasn't on the list." A paper droplist is created by a stocker and given to a forklift driver. However, using paper for this process leads to problems. To fix these issues, I created My Droplist, a tool that provides tracking of droplist.`,
-        imgUrl: "/static/images/projects/mydroplist-web.png",
-        altImgText: "Project Image My Droplist",
-        projectLink: "https://mydroplist.onrender.com",
-        ariaLabel: "My Droplist Link",
-        projectSrc: "https://github.com/treyarte/capstone-one",
-        technologies: [
-            "Python",
-            "Flask",
-            "JavaScript",
-            "Jinja2",
-            "SQLAlchemy",
-            "PostgreSQL"
-        ],
-        isLive:true
-    },
+    // {
+    //     name: "My Droplist",
+    //     description: `At Costco, we frequently hear the phrase "It wasn't on the list." A paper droplist is created by a stocker and given to a forklift driver. However, using paper for this process leads to problems. To fix these issues, I created My Droplist, a tool that provides tracking of droplist.`,
+    //     imgUrl: "/static/images/projects/mydroplist-web.png",
+    //     altImgText: "Project Image My Droplist",
+    //     projectLink: "https://mydroplist.onrender.com",
+    //     ariaLabel: "My Droplist Link",
+    //     projectSrc: "https://github.com/treyarte/capstone-one",
+    //     technologies: [
+    //         "Python",
+    //         "Flask",
+    //         "JavaScript",
+    //         "Jinja2",
+    //         "SQLAlchemy",
+    //         "PostgreSQL"
+    //     ],
+    //     isLive:true
+    // },
     {
         name: "My Droplist Mobile",
         description: `This mobile version sets out to be an improvement of the web version. My Droplist web app used a responsive design to make it feel natural on the phone. Since it was a web application, features such as swiping and notifications could not be utilized, thus making the app not a truly mobile experience.`,
