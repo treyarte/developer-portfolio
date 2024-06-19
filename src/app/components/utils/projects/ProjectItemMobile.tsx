@@ -1,6 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { ProjectItemProps } from './ProjectItem';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import {v4 as uuidV4} from 'uuid';
 
 export default function ProjectItemMobile(props:ProjectItemProps) {
     const {
@@ -9,6 +10,8 @@ export default function ProjectItemMobile(props:ProjectItemProps) {
         projectLink,
         ariaLabel,
         projectSrc,
+        isLive,
+        isRepoLive,
         technologies
     } = props.project;
 
@@ -19,7 +22,10 @@ export default function ProjectItemMobile(props:ProjectItemProps) {
             return `bg-mydroplist-mobile`
         } else if (name === "Connect Four") {
             return `bg-connect-four`
-        } else {
+        } else if (name === "CBIT Trainer Marketing Site"){
+            return `bg-cbit-marketing`
+        }
+        else {
             return `bg-lava-demo`    
         }        
     }
@@ -40,22 +46,28 @@ export default function ProjectItemMobile(props:ProjectItemProps) {
                 </p>
                 <ul className="flex flex-row text-right justify-end gap-5 flex-wrap">
                     {technologies.map(tech => (
-                        <li>{tech}</li>
+                        <li key={uuidV4()}>{tech}</li>
                     ))}  
                 </ul>
                 <ul className="flex flex-row flex-wrap gap-5">
-                    <li>
+                    {isRepoLive && (
+
+                        <li>
                         <a target="blank" href={projectSrc} 
                             className="text-xl cursor-pointer hover:text-zinc-300">
                                 <GitHubIcon/>
                         </a>                       
                     </li>
-                    <li>
-                        <a target="blank" href={projectLink} 
-                            className="text-xl cursor-pointer hover:text-zinc-300">
+                    )}
+                    {
+                        isLive && (
+                        <li>
+                            <a target="blank" href={projectLink} 
+                                className="text-xl cursor-pointer hover:text-zinc-300">
                                 <OpenInNewIcon/>
-                        </a>                       
-                    </li>
+                            </a>                       
+                        </li>
+                    )}
                 </ul>
             </div>
         </div>

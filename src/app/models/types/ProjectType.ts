@@ -3,6 +3,7 @@
  */
 export type ProjectType = {
     name:string;
+    job:string;
     description:string;
     imgUrl:string;
     altImgText:string;
@@ -11,4 +12,5 @@ export type ProjectType = {
     projectSrc:string;
     technologies:string[];    
     isLive:boolean;
+    isRepoLive:boolean;
 }
