@@ -32,7 +32,7 @@ const Projects:ProjectType[] = [
         This Unity project is a 2D platformer designed as a testing ground for various mechanics used in my future platforming games. The tools and features developed here are created with a focus on reusability. During this project, I gained valuable experience implementing concepts like the observer pattern, which was helpful in handling player deaths and stage resets.`,
         imgUrl: "/static/images/projects/lava-demo.png",
         altImgText: "Project Image Lava Demo",
-        projectLink: "https://play.unity.com/mg/other/webgl-builds-327790",
+        projectLink: "https://play.unity.com/en/games/d199c151-e64c-44d8-8211-f32e7013117c/lava-demo",
         ariaLabel: "Lava Demo Link",
         projectSrc: "https://github.com/treyarte/2d-platform-tutorial",
         technologies: [
