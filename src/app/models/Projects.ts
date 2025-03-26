@@ -4,27 +4,49 @@ import { ProjectType } from "./types/ProjectType"
  */
 const Projects:ProjectType[] = [
     {
-        name: "CBIT Trainer Marketing Site",
-        job: "Bouncing Pixel",
-        description: `At Bouncing Pixel, I collaborated with a designer to create a marketing website for the CBIT Trainer program. I developed the frontend using Next.js with TypeScript, and integrated it with a pre-existing C# API backend instead of Next.js's server features. The website incorporates mapping functionality with Leaflet and the OpenStreetMap API, and user registration is managed via Stripe for payments. Input validation and sanitization are handled using Yup, Formik, and DomPurify.`,
-        imgUrl: "/static/images/projects/cbit-marketing.gif",
-        altImgText: "CBIT Marketing",
-        projectLink: "https://www.bouncingpixel.com",
-        ariaLabel: "CBIT Marketing",
-        projectSrc: "#",
+        name: "Feed It Games",
+        job: "Personal",
+        description: `Feed It Games is a news aggregator for staying updated with the latest gaming news. The is aggregates articles from popular gaming websites into a personalized feed, allowing users to customize their experience by selecting their preferred sources and tags.`,
+        imgUrl: "/static/images/projects/feeditgames.PNG",
+        altImgText: "Feed It Games Image",
+        projectLink: "https://feeditgames.com",
+        ariaLabel: "Feed It Games",
+        projectSrc: "https://github.com/treyarte/feeditgames",
         technologies: [
             "NextJS",
             "C# .NET",
+            "Azure Functions",
             "MongoDB",
-            "TypeScript",
-            "Stripe",
-            "Leaflet",
-            "Formik",
-            "Yup"
+            "TypeScript",            
+            "Prisma",
+            "Zod",
+            "react-hook-form"
         ],
         isLive: true,
-        isRepoLive: false
+        isRepoLive: true
     },
+    // {
+    //     name: "CBIT Trainer Marketing Site",
+    //     job: "Bouncing Pixel",
+    //     description: `At Bouncing Pixel, I collaborated with a designer to create a marketing website for the CBIT Trainer program. I developed the frontend using Next.js with TypeScript, and integrated it with a pre-existing C# API backend instead of Next.js's server features. The website incorporates mapping functionality with Leaflet and the OpenStreetMap API, and user registration is managed via Stripe for payments. Input validation and sanitization are handled using Yup, Formik, and DomPurify.`,
+    //     imgUrl: "/static/images/projects/cbit-marketing.gif",
+    //     altImgText: "CBIT Marketing",
+    //     projectLink: "https://www.bouncingpixel.com",
+    //     ariaLabel: "CBIT Marketing",
+    //     projectSrc: "#",
+    //     technologies: [
+    //         "NextJS",
+    //         "C# .NET",
+    //         "MongoDB",
+    //         "TypeScript",
+    //         "Stripe",
+    //         "Leaflet",
+    //         "Formik",
+    //         "Yup"
+    //     ],
+    //     isLive: true,
+    //     isRepoLive: false
+    // },
     {
         name: "Lava Demo",
         job: "Personal",

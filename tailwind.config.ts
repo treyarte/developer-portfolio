@@ -17,6 +17,7 @@ const config: Config = {
         'mydroplist-mobile': "url('/static/images/projects/mydroplist-mobile.png')",
         'connect-four': "url('/static/images/projects/connect-four.png')",
         'cbit-marketing': "url('/static/images/projects/cbit-marketing.gif')",
+        'feed-it': "url('/static/images/projects/feeditgames.png')",
 
       },
       colors:{
