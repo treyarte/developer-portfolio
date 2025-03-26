@@ -33,7 +33,10 @@ export default function ProjectItem(props:ProjectItemProps) {
             return `before:bg-connect-four`
         } else if (name === "CBIT Trainer Marketing Site") {
             return `before:bg-cbit-marketing`    
-        } else {
+        } else if (name === "Feed It Games") {
+            return `before:bg-feed-it`
+        }         
+        else {
             return `before:bg-lava-demo`    
         }        
     }

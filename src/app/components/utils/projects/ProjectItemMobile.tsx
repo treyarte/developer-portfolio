@@ -24,7 +24,9 @@ export default function ProjectItemMobile(props:ProjectItemProps) {
             return `bg-connect-four`
         } else if (name === "CBIT Trainer Marketing Site"){
             return `bg-cbit-marketing`
-        }
+        } else if (name === "Feed It Games") {
+            return `bg-feed-it`
+        }  
         else {
             return `bg-lava-demo`    
         }        
